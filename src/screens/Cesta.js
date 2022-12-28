@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Dimensions, Text, View } from 'react-native';
 import topImage from '../../assets/topo.png';
 import logo from '../../assets/logo.png';
+import CustomText from '../components/CustomText';
 
 const width = Dimensions.get('screen').width
 export default function Cesta() {
@@ -8,19 +9,19 @@ export default function Cesta() {
     return (
         <>
             <Image source={topImage} style={styles.header} />
-            <Text style={styles.title}>Detalhe da cesta</Text>
+            <CustomText style={styles.title}>Detalhe da cesta</CustomText>
             <View style={styles.contentView}>
-                <Text style={styles.name}>Cesta de verduras</Text>
+                <CustomText style={styles.name}>Cesta de verduras</CustomText>
                 <View style={styles.farmView}>
                     <Image source={logo} style={styles.farmImage} />
-                    <Text style={styles.farmName}>Jenny Jack Farm</Text>
+                    <CustomText style={styles.farmName}>Jenny Jack Farm</CustomText>
                 </View>
-                <Text style={styles.description}>
+                <CustomText style={styles.description}>
                     Uma cesta com produtos selecionados 
                     cuidadosamente da fazenda
                     para sua cozinha
-                </Text>
-                <Text style={styles.price}>R$ 40,00</Text>
+                </CustomText>
+                <CustomText style={styles.price}>R$ 40,00</CustomText>
             </View>
         </>
     );
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         color: '#464646',
-        fontFamily: 'MontserratBold'
+        fontWeight: 'bold',
     },
     farmView: {
         flexDirection: 'row',
@@ -62,8 +63,7 @@ const styles = StyleSheet.create({
     farmName: {
         fontSize: 16,
         lineHeight: 26,
-        marginLeft: 12,
-        fontFamily: 'MontserratRegular'
+        marginLeft: 12
         
     },
     description: {
