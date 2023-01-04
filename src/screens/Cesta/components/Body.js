@@ -1,8 +1,9 @@
 import { Image, StyleSheet, View } from "react-native"
+import CustomButton from "../../../components/CustomButton";
 
 import CustomText from "../../../components/CustomText"
 
-export default function Body({ logo, name, farmName, description, price }) {
+export default function Body({ logo, name, farmName, description, price, button }) {
     return <>
         <CustomText style={styles.name}>{name}</CustomText>
         <View style={styles.farmView}>
@@ -11,6 +12,7 @@ export default function Body({ logo, name, farmName, description, price }) {
         </View>
         <CustomText style={styles.description}>{description}</CustomText>
         <CustomText style={styles.price}>{price}</CustomText>
+        <CustomButton title={button} style={{marginTop: 16}} />
     </>
 }
 
@@ -46,5 +48,5 @@ const styles = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8
-    }
+    },
 });
