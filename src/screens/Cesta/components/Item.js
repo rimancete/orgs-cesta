@@ -1,4 +1,4 @@
-import { FlatList, Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 import CustomText from "../../../components/CustomText";
 
 export default function Item({ item: { name, image } }) {
